@@ -20,6 +20,11 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: DanySK/compile-and-publish-all-latex@1.0.70
+      - name: Cache Docker images.
+        uses: ScribeMD/docker-cache@0.3.7
+        with:
+          key: docker-${{ runner.os }}-${{ hashFiles('.github/workflows/build-and-deploy.yml') }}
+      - name: Compile and publish
+        uses: DanySK/compile-and-publish-all-latex@1.0.70
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
