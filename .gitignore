@@ -17,4 +17,5 @@ build/
 *.toc
 *.vrb
 .directory
+fig-eps-converted-to.pdf
 sn-article.pdf
