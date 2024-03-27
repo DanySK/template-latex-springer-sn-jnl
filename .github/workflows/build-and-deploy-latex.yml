@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cache Docker images.
-        uses: ScribeMD/docker-cache@0.4.0
+        uses: ScribeMD/docker-cache@0.5.0
         with:
           key: docker-${{ runner.os }}-${{ hashFiles('.github/workflows/build-and-deploy.yml') }}
       - name: Compile and publish
