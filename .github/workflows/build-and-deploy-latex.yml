@@ -25,6 +25,6 @@ jobs:
         with:
           key: docker-${{ runner.os }}-${{ hashFiles('.github/workflows/build-and-deploy.yml') }}
       - name: Compile and publish
-        uses: DanySK/compile-and-publish-all-latex@2.0.31
+        uses: DanySK/compile-and-publish-all-latex@2.0.32
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
